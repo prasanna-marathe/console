@@ -71,7 +71,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: target/checkout/operator/target/bundle/console-operator/
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64,linux/ppc64le
           provenance: false
           push: true
           file: target/checkout/operator/target/bundle/console-operator/bundle.Dockerfile
@@ -93,7 +93,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: target/checkout/operator/target/
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64,linux/ppc64le
           provenance: false
           push: true
           file: target/checkout/operator/target/catalog.Dockerfile
@@ -116,7 +116,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: target/checkout/ui/
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64,linux/ppc64le
           provenance: false
           push: true
           tags: |
